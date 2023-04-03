@@ -1,0 +1,233 @@
+/* Reset CSS */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+/*html{
+  overflow-y:hidden;
+  overflow-x:hidden;
+  }
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/* Main CSS */
+@import url('https://fonts.googleapis.com/css?family=Maven+Pro');
+
+body {
+  background: rgb(228,250,1);
+  background: linear-gradient(90deg, rgba(228,250,1,1) 5%, rgba(212,180,0,1) 29%, rgba(255,81,0,1) 46%, rgba(236,64,1,1) 57%, rgba(238,16,1,1) 67%, rgba(239,43,1,1) 76%, rgba(242,0,0,0.8407738095238095) 90%);  
+  /*background-color: #f2ff00;*/
+  font-family: 'Maven Pro', Times New Roman;
+}
+  
+.container {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2em 0;
+}
+
+.search {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  padding: 1em 0;
+}
+
+
+.search .search-input,
+.search .search-button {
+  border: 0;
+  padding: 1em;
+}
+
+.search .search-input {
+  width: 80%;
+}
+
+.search .search-button {
+  background-color: #2b75bb;
+  color: #fff;
+  cursor: pointer;
+}
+
+
+.error {
+  display: none;
+  font-size: 1.5em;
+}
+
+.pokemon {
+  width: 80%;
+  display: block;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  opacity: 2;
+  color: white; 
+}
+
+.pokemon .pokemon-picture {
+  width: 150px;
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  border: 3px solid #fbf700;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 38px;
+  margin-bottom: 38px;
+}
+
+.pokemon .pokemon-picture img {
+  width: 100%;
+}
+
+
+.pokemon .pokemon-info {
+  width: 100%;
+  background-color: #2b75bb;
+  flex: 2;
+}
+
+.pokemon-info {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  padding: 1em;
+}
+
+
+.pokemon-info .name,
+.pokemon-info .skill,
+.pokemon-info .weight,
+.pokemon-info .height  {
+  width: 100%;
+  padding: .5em .2em;
+  font-size: .7em;
+}
+
+.pokemon-info .name {
+  font-size: 2.5em;
+  text-align: center;
+  color: #FFC312; 
+  font-weight: bold;
+  text-transform: capitalize;
+}
+.pokemon-info .number{
+  width: 100%;
+  text-align: center;
+  font-size: 1em;
+  font-weight: bold;
+  margin: 0;
+  text-transform: capitalize;
+}
+.pokemon-info .skill{
+  text-align: justify;
+  font-size: 1em;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.pokemon-info .weight,
+.pokemon-info .height {
+  width: 100%;
+  text-align: center;
+  font-size: 1em;
+  font-weight: bold;
+}
+
+.fade {
+  animation: fadeEfect 1s;
+}
+
+
+@media(min-width: 758px) {
+  .pokemon { 
+    flex-direction: row;  
+  }
+}
+
+@keyframes fadeEfect{
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.2;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Estilos do rodapé */
+
+footer {
+  background: linear-gradient(90deg, rgba(228,250,1,1) 5%, rgba(212,180,0,1) 29%, rgba(255,81,0,1) 46%, rgba(236,64,1,1) 57%, rgba(238,16,1,1) 67%, rgba(239,43,1,1) 76%, rgba(242,0,0,0.8407738095238095) 90%);
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+footer a:hover {
+  color: #ccc;
+}
